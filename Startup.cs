@@ -50,6 +50,7 @@
             serviceCollection.AddAutofac();
             serviceCollection.AddOptions();
 
+            //  serviceCollection.AddTransient<>
             var builder = new ContainerBuilder();
             builder.Populate(serviceCollection);
             builder.RegisterLogger();

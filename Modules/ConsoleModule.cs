@@ -7,7 +7,8 @@ namespace BgFBG_MergeTool.Modules
         protected override void Load(ContainerBuilder builder)
         {
             // To register dependencies
-         //   builder.AddAutoMapper(x=>x.AddProfile<MyAutoMapperProfile>());
-         }
+            //   builder.AddAutoMapper(x=>x.AddProfile<MyAutoMapperProfile>());
+
+        }
     }
 }
