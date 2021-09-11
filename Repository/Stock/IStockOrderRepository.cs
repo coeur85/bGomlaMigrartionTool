@@ -7,8 +7,7 @@ namespace BgFBG_MergeTool.Repository.Stock
 {
     public interface IStockOrderRepository
     {
-        Task<StkOrderEnitiyModel> SelectStockOrderAsync(StockOrderSelectorDto model, string connectionString)
-     
+        Task<StkOrderEnitiyModel> SelectStockOrderAsync(StockOrderSelectorDto model, string connectionString);
         Task<int> GetNewStockOrderNumberAsync(NewStockOrderNumberModel model, string connectionString);
         Task<int> InsertStockOrderAsync(StkOrderEnitiyModel model, string connectionString);
         Task<int> DeleteStockOrderAsync(StkOrderEnitiyModel model, string connectionString);

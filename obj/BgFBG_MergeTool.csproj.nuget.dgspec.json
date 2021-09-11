@@ -1,27 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ahmed.magdi\\source\\repos\\BgFBG_MergeTool\\BgFBG_MergeTool.csproj": {}
+    "/Users/magdi/Documents/repo/bGomlaMigrartionTool/BgFBG_MergeTool.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ahmed.magdi\\source\\repos\\BgFBG_MergeTool\\BgFBG_MergeTool.csproj": {
+    "/Users/magdi/Documents/repo/bGomlaMigrartionTool/BgFBG_MergeTool.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ahmed.magdi\\source\\repos\\BgFBG_MergeTool\\BgFBG_MergeTool.csproj",
+        "projectUniqueName": "/Users/magdi/Documents/repo/bGomlaMigrartionTool/BgFBG_MergeTool.csproj",
         "projectName": "BgFBG_MergeTool",
-        "projectPath": "C:\\Users\\ahmed.magdi\\source\\repos\\BgFBG_MergeTool\\BgFBG_MergeTool.csproj",
-        "packagesPath": "C:\\Users\\ahmed.magdi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ahmed.magdi\\source\\repos\\BgFBG_MergeTool\\obj\\",
+        "projectPath": "/Users/magdi/Documents/repo/bGomlaMigrartionTool/BgFBG_MergeTool.csproj",
+        "packagesPath": "/Users/magdi/.nuget/packages/",
+        "outputPath": "/Users/magdi/Documents/repo/bGomlaMigrartionTool/obj/",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ahmed.magdi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/magdi/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -113,8 +114,12 @@
           "warn": true,
           "downloadDependencies": [
             {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.15, 3.1.15]"
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
             }
           ],
           "frameworkReferences": {
@@ -122,7 +127,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.5.21302.13\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.400/RuntimeIdentifierGraph.json"
         }
       }
     }
