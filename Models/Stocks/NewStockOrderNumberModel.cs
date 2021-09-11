@@ -1,6 +1,6 @@
 namespace BgFBG_MergeTool.Models.Stocks
 {
-    public class NewStockOrderNumber
+    public class NewStockOrderNumberModel
     {
         public int Branch { get; set; }
         public int Year { get; set; }
