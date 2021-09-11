@@ -1,33 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "/Users/magdi/Documents/repo/bGomlaMigrartionTool/BgFBG_MergeTool.csproj": {}
+    "C:\\Users\\ahmed.magdi\\source\\repos\\BgFBG_MergeTool\\BgFBG_MergeTool.csproj": {}
   },
   "projects": {
-    "/Users/magdi/Documents/repo/bGomlaMigrartionTool/BgFBG_MergeTool.csproj": {
+    "C:\\Users\\ahmed.magdi\\source\\repos\\BgFBG_MergeTool\\BgFBG_MergeTool.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/magdi/Documents/repo/bGomlaMigrartionTool/BgFBG_MergeTool.csproj",
+        "projectUniqueName": "C:\\Users\\ahmed.magdi\\source\\repos\\BgFBG_MergeTool\\BgFBG_MergeTool.csproj",
         "projectName": "BgFBG_MergeTool",
-        "projectPath": "/Users/magdi/Documents/repo/bGomlaMigrartionTool/BgFBG_MergeTool.csproj",
-        "packagesPath": "/Users/magdi/.nuget/packages/",
-        "outputPath": "/Users/magdi/Documents/repo/bGomlaMigrartionTool/obj/",
+        "projectPath": "C:\\Users\\ahmed.magdi\\source\\repos\\BgFBG_MergeTool\\BgFBG_MergeTool.csproj",
+        "packagesPath": "C:\\Users\\ahmed.magdi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ahmed.magdi\\source\\repos\\BgFBG_MergeTool\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "/Users/magdi/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\ahmed.magdi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net5"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net5.0": {
+            "targetAlias": "net5",
             "projectReferences": {}
           }
         },
@@ -38,8 +37,8 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net5.0": {
+          "targetAlias": "net5",
           "dependencies": {
             "Autofac": {
               "target": "Package",
@@ -114,12 +113,8 @@
           "warn": true,
           "downloadDependencies": [
             {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.5, 5.0.5]"
             }
           ],
           "frameworkReferences": {
@@ -127,7 +122,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.400/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.5.21302.13\\RuntimeIdentifierGraph.json"
         }
       }
     }
