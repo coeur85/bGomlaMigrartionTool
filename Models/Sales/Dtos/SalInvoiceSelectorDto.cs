@@ -2,7 +2,7 @@ using System;
 
 namespace BgFBG_MergeTool.Models.Sales.Dtos
 {
-    public class DeleteSalInvoiceDto
+    public class SalInvoiceSelectorDto
     {
         public int  Branch { get; set; }
         public int InvoiceNo { get; set; }
