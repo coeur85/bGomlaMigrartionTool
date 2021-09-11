@@ -6,6 +6,6 @@ namespace BgFBG_MergeTool.Models.Stocks
     public class StockOrderModel
     {
         public StkOrderEnitiyModel Header { get; set; }  
-        public List<StkOrderItemEnitiyModel> Items { get; set; }
+        public List<StkOrderItemEnitiyModel> Items { get; set; } = new();
     }
 }

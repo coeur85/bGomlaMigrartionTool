@@ -4,7 +4,7 @@ using BgFBG_MergeTool.Models.Accounting.Enitiy;
 
 namespace BgFBG_MergeTool.Repository.Accounting
 {
-    public interface IِAccTrnHed
+    public interface IAccTrnHed
     {
         Task<AccTrnHedEnitiyModel> SelectAccTrnHeadAsync(AccountingTransactionSelectorDto model);
         Task<int> DeleteAccTrnHeadAsync(AccTrnHedEnitiyModel model);

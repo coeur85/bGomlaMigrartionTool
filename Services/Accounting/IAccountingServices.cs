@@ -9,7 +9,6 @@ namespace BgFBG_MergeTool.Services.Accounting
         Task<AccountingTransaction> GetAccountingTransactionAsync(AccountingTransactionSelectorDto model);
         Task<int> DeleteAccountingTransactionAsync(AccountingTransactionSelectorDto model);
         Task<int> CreateAccountingTransactionAsync(AccountingTransactionCreateDto model);
-        
          void SetConnectionString(string connectionString);
         
     }
