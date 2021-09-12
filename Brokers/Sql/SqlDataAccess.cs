@@ -11,7 +11,6 @@ namespace PBgFBG_MergeTool.Brokers.Stocks
     public class SqlDataAccess : ISqlDataAccess, IDisposable
     {
 
-        private IDbTransaction _transaction;
         public async Task<T> QueryFirstOrDefaultAsync<T, U>(IDbTransaction transaction, string sqlQury, U paramters)
         {
             using IDbConnection connection = transaction.Connection;
@@ -49,7 +48,6 @@ namespace PBgFBG_MergeTool.Brokers.Stocks
         }
         public void Dispose()
         {
-            _transaction.Dispose();
         }
     }
 }
