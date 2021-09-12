@@ -1,5 +1,7 @@
 using System.Threading.Tasks;
+using BgFBG_MergeTool.Brokers.Sql;
 using BgFBG_MergeTool.Models.Accounting.Dtos;
+using BgFBG_MergeTool.Models.Branches;
 using BgFBG_MergeTool.Models.Stocks;
 using BgFBG_MergeTool.Models.Stocks.Dtos;
 using BgFBG_MergeTool.Repository.Stock;
@@ -15,67 +17,37 @@ namespace BgFBG_MergeTool.Services.Stock
         private readonly IStockOrderRepository _orderRepo;
         private readonly IStockOrderItemsRepository _orderItemsRepo;
         private readonly IAccountingServices _accountingService;
-        private string _connectionString;
+        private readonly ISqlTransaction _transactions;
 
         public StockServices(IStockOrderRepository order, 
         IStockOrderItemsRepository orderItems, 
-        IAccountingServices  accountingServices)
+        IAccountingServices  accountingServices,
+        ISqlTransaction transaction )
         {
             _orderRepo = order;
             _orderItemsRepo = orderItems;
             _accountingService = accountingServices;
+            _transactions = transaction;
         }
 
-        public void SetConnectionString(string connectionString){
-            _connectionString = connectionString;
-            _accountingService.SetConnectionString(_connectionString);
-
-        }
-         
-        public async Task<int> DeleteStockOrderAsync(StockOrderSelectorDto model)
+        public Task<int> CreateStockOrderAsync(StockOrderCreateDto model)
         {
-            int output = 0;
-            var orderItems = await _orderItemsRepo.SelectStockOrderItemsAsync(model, _connectionString);
-            foreach (var item in orderItems)
-            {
-                output += await _orderItemsRepo.DeleteStockOrderItemsAsync(item, _connectionString);
-            }
-          
-            AccountingTransactionSelectorDto accountingSelector = new AccountingTransactionSelectorDto { 
-                      Location = model.Branch , DocType = model.DocType, OriginalDocNo = model.OrderNO,
-                    OriginalDocDate = model.OrderDate
-            } ;
-            output += await _accountingService.DeleteAccountingTransactionAsync(accountingSelector);
-
-            var order = await _orderRepo.SelectStockOrderAsync(model, _connectionString);
-            output += await _orderRepo.DeleteStockOrderAsync(order, _connectionString);
-
-            return output;
-        }
-
-        public async Task<int> GetNewStockOrderNumberAsync(NewStockOrderNumberModel model)
-        {
-            int output = 0;
-            output = await _orderRepo.GetNewStockOrderNumberAsync(model, _connectionString);
-            return output;
-        }
-
-        public async Task<int> CreateStockOrderAsync(StockOrderCreateDto model)
-        {
-            // TODO esraa code fro  creating new order
-            AccountingTransactionCreateDto accountingCreate = new AccountingTransactionCreateDto();
-            await _accountingService.CreateAccountingTransactionAsync(accountingCreate);
             throw new System.NotImplementedException();
         }
 
-        public async Task<StockOrderModel> GetStockOrderAsync(StockOrderSelectorDto model)
+        public Task<int> DeleteStockOrderAsync(StockOrderSelectorDto model)
         {
-            StockOrderModel output = new StockOrderModel();
-            output.Header = await _orderRepo.SelectStockOrderAsync(model, _connectionString);
-            output.Items = await _orderItemsRepo.SelectStockOrderItemsAsync(model, _connectionString);
-            return output;
+            throw new System.NotImplementedException();
         }
 
+        public Task<int> GetNewStockOrderNumberAsync(NewStockOrderNumberModel model)
+        {
+            throw new System.NotImplementedException();
+        }
 
+        public Task<StockOrderModel> GetStockOrderAsync(StockOrderSelectorDto model)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

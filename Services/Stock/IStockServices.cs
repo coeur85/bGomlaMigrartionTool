@@ -12,7 +12,5 @@ namespace Services.Stock
         Task<int> GetNewStockOrderNumberAsync(NewStockOrderNumberModel model);
         Task<int> CreateStockOrderAsync(StockOrderCreateDto model);
         Task<int> DeleteStockOrderAsync(StockOrderSelectorDto model);
-
-        void SetConnectionString(string connectionString);
     }
 }

@@ -12,34 +12,34 @@ namespace PBgFBG_MergeTool.Brokers.Stocks
     {
 
         private IDbTransaction _transaction;
-        public async Task<T> QueryFirstOrDefaultAsync<T, U>(string connectionString, string sqlQury, U paramters)
+        public async Task<T> QueryFirstOrDefaultAsync<T, U>(IDbTransaction transaction, string sqlQury, U paramters)
         {
-            using IDbConnection connection = new SqlConnection(connectionString);
+            using IDbConnection connection = transaction.Connection;
             return await connection.QueryFirstOrDefaultAsync<T>(sqlQury, paramters);
         }
-        public async Task<T> QueryFirstOrDefaultAsync<T>(string connectionString, string sqlQury)
+        public async Task<T> QueryFirstOrDefaultAsync<T>(IDbTransaction transaction, string sqlQury)
         {
-            using IDbConnection connection = new SqlConnection(connectionString);
+            using IDbConnection connection =  transaction.Connection;
             return await connection.QueryFirstOrDefaultAsync<T>(sqlQury);
         }
-        public async Task<IEnumerable<T>> QueryAsync<T, U>(string connectionString, string sqlQury, U paramters)
+        public async Task<IEnumerable<T>> QueryAsync<T, U>(IDbTransaction transaction, string sqlQury, U paramters)
         {
-            using IDbConnection connection = new SqlConnection(connectionString);
+            using IDbConnection connection = transaction.Connection;
             return await connection.QueryAsync<T>(sqlQury, param: paramters);
         }
-        public async Task<IEnumerable<T>> QueryAsync<T>(string connectionString, string sqlQury)
+        public async Task<IEnumerable<T>> QueryAsync<T>(IDbTransaction transaction, string sqlQury)
         {
-            using IDbConnection connection = new SqlConnection(connectionString);
+            using IDbConnection connection =  transaction.Connection;
             return await connection.QueryAsync<T>(sqlQury);
         }
-        public async Task<T> QuerySingleAsync<T, U>(string connectionString, string sqlQury, U paramters)
+        public async Task<T> QuerySingleAsync<T, U>(IDbTransaction transaction, string sqlQury, U paramters)
         {
-            using IDbConnection connection = new SqlConnection(connectionString);
+            using IDbConnection connection =  transaction.Connection;
             return await connection.QuerySingleAsync<T>(sqlQury, paramters);
         }
-        public async Task<T> QuerySingleAsync<T>(string connectionString, string sqlQury)
+        public async Task<T> QuerySingleAsync<T>(IDbTransaction transaction, string sqlQury)
         {
-            using IDbConnection connection = new SqlConnection(connectionString);
+            using IDbConnection connection =  transaction.Connection;
             return await connection.QuerySingleAsync<T>(sqlQury);
         }
         public async Task<int> ExecuteAsync<U>(IDbTransaction transaction, string sqlQury, U paramters)
